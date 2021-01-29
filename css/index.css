@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Mohave;
+  src: url(../assets/fonts/mohave-light.woff2),
+    url(../assets/fonts/mohave-light.woff);
+}
+
+@font-face {
+  font-family: Mohave;
+  font-weight: 700;
+  src: url(../assets/fonts/mohave-bold.woff2),
+    url(../assets/fonts/mohave-bold.woff);
+}
+
+:root {
+  --background-main: #272727;
+  --white: #ffffff;
+  --negC10: #814ee7;
+  --C0: #3f24ec;
+  --C7: #79e87c;
+  --C14: #fbe157;
+  --C21: #ff9737;
+  --C25: #fe3b3b;
+}
+
+body {
+  background-color: var(--background-main);
+  color: var(--white);
+  font-family: Mohave;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 160px auto 80px auto;
+  width: 800px;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 24px 48px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  background-image: url(../assets/images/temp.svg);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 400px;
+  padding-left: 64px;
+}
+
+select {
+  background: var(--C7);
+  border-color: transparent;
+  padding: 5px;
+}
+
+text {
+  fill: var(--white);
+  text-anchor: end;
+}
+
+text.city {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+text.country {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+text.temp {
+  /* This style attr works, but VSCODE is throwing:
+  Unknown property: 'dominant-baseline' */
+  /* dominant-baseline: middle; */
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0;
+  text-anchor: middle;
+}
+
+circle {
+  fill: var(--white);
+  opacity: 0;
+}
+
+path {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 4px;
+}
+
+circle,
+text.temp,
+path {
+  transition: opacity 0.25s;
+}
+
+g.data-point:hover circle,
+g.data-point:hover text {
+  opacity: 1;
+}
+
+g.data-point:hover path {
+  opacity: 0;
+}
