@@ -3,4 +3,4 @@
 
 https://pamelaabreu.github.io/d3Tutorial-heatmap/
 
-![heatmap project screenshot](assets/images/projectScreenshot.png)
+![heatmap project screenshot](assets/images/projectScreenshot.gif)
